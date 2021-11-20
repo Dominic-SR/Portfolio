@@ -1,4 +1,5 @@
 .topcontainer{
+    background-image: url("../../files/banner.jpg");
     height: 100vh;
     background-position: center;
     background-size: cover;
