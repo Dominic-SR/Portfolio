@@ -1,0 +1,8 @@
+.mobileview__container{
+}
+
+.mobileview__container > h1{
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
