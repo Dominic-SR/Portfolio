@@ -8,11 +8,10 @@ import TopContainer from './components/TopContainer/TopContainer';
 import Mobileview from './components/Underconstruction/Mobileview';
 
 function App() {
-  const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-console.log(isMobile)
+ 
   return (
     <div>
-     {(isMobile !== true) ?(
+ 
        <>
      <Header/>
      <TopContainer/>
@@ -21,9 +20,7 @@ console.log(isMobile)
      <ExperienceContainer/>
      <Contact/>
      </>
-     ):(
-       <Mobileview/>
-     )}
+    
     </div>
   );
 }
