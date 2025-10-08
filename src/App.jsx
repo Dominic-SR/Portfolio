@@ -79,7 +79,7 @@ function App() {
                      </div>
                   </section>
                </div>
-               <div>
+               {/* <div>
                   <section className="work section" id="work">
                      <h2 className="section-title" data-aos="fade-down">Current Tech Stack</h2>
                      <div className="work_container bd_grid" data-aos="fade-down" data-aos-delay="250">
@@ -109,7 +109,7 @@ function App() {
                         </div>
                      </div>
                   </section>
-               </div>
+               </div> */}
                <Footer />
             </div>
          </div>
