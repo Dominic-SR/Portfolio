@@ -5,8 +5,17 @@ import HomeImage from "./assets/images/2.png";
 import AboutImage from "./assets/images/3.png";
 import SkillImage from "./assets/images/1.png";
 import './App.css';
+import Slider from "react-slick";
 
 function App() {
+
+   var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <>
@@ -79,6 +88,28 @@ function App() {
                      </div>
                   </section>
                </div>
+
+                 <Slider {...settings}>
+      <div style={{background:"#fff"}}>
+        <h3>1</h3>
+      </div>
+      <div>
+        <h3>2</h3>
+      </div>
+      <div>
+        <h3>3</h3>
+      </div>
+      <div>
+        <h3>4</h3>
+      </div>
+      <div>
+        <h3>5</h3>
+      </div>
+      <div>
+        <h3>6</h3>
+      </div>
+    </Slider>
+
                {/* <div>
                   <section className="work section" id="work">
                      <h2 className="section-title" data-aos="fade-down">Current Tech Stack</h2>
