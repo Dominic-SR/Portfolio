@@ -6,16 +6,19 @@ import AboutImage from "./assets/images/3.png";
 import SkillImage from "./assets/images/1.png";
 import './App.css';
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
 
-   var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+ 
+
+   const renderSlides = () =>
+    [1, 2, 3, 4, 5, 6, 7, 8].map(num => (
+      <div>
+        <h3>Slide {num}</h3>
+      </div>
+    ));
 
   return (
     <>
@@ -89,26 +92,7 @@ function App() {
                   </section>
                </div>
 
-                 <Slider {...settings}>
-      <div style={{background:"#fff"}}>
-        <h3>1</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+             <Slider dots={true}>{renderSlides()}</Slider>
 
                {/* <div>
                   <section className="work section" id="work">
