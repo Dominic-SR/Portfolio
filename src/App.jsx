@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Header from './components/header/header';
 import Footer from './components/footer/Footer';
 import HomeImage from "./assets/images/2.png";
@@ -10,13 +9,73 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function App() {
+  const projects = [
+    {
+      title: "Portfolio Website",
+      description: "A modern portfolio built with React, responsive UI, and animated interactions.",
+      image: HomeImage,
+      tech: "React · CSS · AOS",
+      link: "https://github.com/Dominic-SR"
+    },
+    {
+      title: "Analytics Dashboard",
+      description: "A data-driven dashboard with charts, filters, and real-time metrics.",
+      image: AboutImage,
+      tech: "React · Node.js · MongoDB",
+      link: "https://github.com/Dominic-SR"
+    },
+    {
+      title: "Productivity App",
+      description: "A task planner designed for modern workflows with clean UI and fast performance.",
+      image: SkillImage,
+      tech: "React · Express · Firebase",
+      link: "https://github.com/Dominic-SR"
+    }
+  ];
 
- 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    centerPadding: "120px",
+    slidesToShow: 1,
+    speed: 500,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerPadding: "80px"
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "40px"
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: "20px"
+        }
+      }
+    ]
+  };
 
-   const renderSlides = () =>
-    [1, 2, 3, 4, 5, 6, 7, 8].map(num => (
-      <div>
-        <h3>Slide {num}</h3>
+  const renderSlides = () =>
+    projects.map((project, index) => (
+      <div key={index} className="project_slide-card">
+        <div className="project_card">
+          <div className="project_img">
+            <img src={project.image} alt={project.title} />
+          </div>
+          <div className="project_info">
+            <h3 className="project_title">{project.title}</h3>
+            <p className="project_description">{project.description}</p>
+            <span className="project_tech">{project.tech}</span>
+            <a href={project.link} target="_blank" rel="noreferrer" className="project_link">View project</a>
+          </div>
+        </div>
       </div>
     ));
 
@@ -91,9 +150,30 @@ function App() {
                      </div>
                   </section>
                </div>
-
-             <Slider dots={true}>{renderSlides()}</Slider>
-
+               <section className="projects section" id="projects">
+                  <h2 className="section-title" data-aos="fade-down">Projects</h2>
+                  <div className="projects_intro bd_grid" data-aos="fade-down" data-aos-delay="150">
+                     <p className="projects_text">Selected work with featured details, technologies, and repository links.</p>
+                  </div>
+                  <div className="projects_cards bd_grid" data-aos="fade-up" data-aos-delay="250">
+                     {projects.map((project, index) => (
+                        <article key={index} className="project_card">
+                           <div className="project_img">
+                              <img src={project.image} alt={project.title} />
+                           </div>
+                           <div className="project_info">
+                              <h3 className="project_title">{project.title}</h3>
+                              <p className="project_description">{project.description}</p>
+                              <span className="project_tech">{project.tech}</span>
+                              <a href={project.link} target="_blank" rel="noreferrer" className="project_link">View project</a>
+                           </div>
+                        </article>
+                     ))}
+                  </div>
+                  <div className="project_slider bd_grid" data-aos="fade-up" data-aos-delay="350">
+                     <Slider {...sliderSettings}>{renderSlides()}</Slider>
+                  </div>
+               </section>
                {/* <div>
                   <section className="work section" id="work">
                      <h2 className="section-title" data-aos="fade-down">Current Tech Stack</h2>
