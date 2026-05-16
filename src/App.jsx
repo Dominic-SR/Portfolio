@@ -11,25 +11,25 @@ import "slick-carousel/slick/slick-theme.css";
 function App() {
   const projects = [
     {
-      title: "Portfolio Website",
-      description: "A modern portfolio built with React, responsive UI, and animated interactions.",
-      image: HomeImage,
-      tech: "React · CSS · AOS",
-      link: "https://github.com/Dominic-SR"
+      title: "E market Sage",
+      description: "A modern e-commerce platform with add to cart functionality built with React, responsive UI, and animated interactions.",
+      image: "https://raw.githubusercontent.com/Dominic-SR/E-Market/refs/heads/main/src/assets/images/pic-1.png",
+      tech: "React · CSS · ES6 · HOOHS",
+      link: "https://e-market-sage.vercel.app/"
     },
     {
-      title: "Analytics Dashboard",
-      description: "A data-driven dashboard with charts, filters, and real-time metrics.",
-      image: AboutImage,
-      tech: "React · Node.js · MongoDB",
-      link: "https://github.com/Dominic-SR"
+      title: "Foot Court",
+      description: "A modern Food and Beverage ordering platform with responsive design.",
+      image: "https://raw.githubusercontent.com/Dominic-SR/food-court/main/assets/screenshots/home.png",
+      tech: "HTML · CSS · JavaScript",
+      link: "https://food-court-red.vercel.app/"
     },
     {
-      title: "Productivity App",
-      description: "A task planner designed for modern workflows with clean UI and fast performance.",
-      image: SkillImage,
-      tech: "React · Express · Firebase",
-      link: "https://github.com/Dominic-SR"
+      title: "Weather App",
+      description: "A simple weather application that displays current conditions and forecasts.",
+      image: "https://raw.githubusercontent.com/Dominic-SR/Weather-App/refs/heads/main/src/Assets/Images/img1.png",
+      tech: "React · CSS · JavaScript",
+      link: "https://weather-app-theta-black-57.vercel.app/"
     }
   ];
 
@@ -72,8 +72,10 @@ function App() {
           <div className="project_info">
             <h3 className="project_title">{project.title}</h3>
             <p className="project_description">{project.description}</p>
-            <span className="project_tech">{project.tech}</span>
+            <p className="project_tech">{project.tech}</p>
+            <div>
             <a href={project.link} target="_blank" rel="noreferrer" className="project_link">View project</a>
+            </div>
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@ function App() {
          <div>
             <div className="main">
                <div>
-                  <section className="home bd_grid" id="home">
+                  <div className="home bd_grid" id="home">
                      <div className="home_data" data-aos="fade-down">
                         <h1 className="home_title">Hi, <br/>I'm <span className="home_title-color" style={{color: "rgb(69, 169, 143)"}}>Dominic </span><br/>Software Engineer</h1>
                         <a href="https://github.com/Dominic-SR" target="_blank" className="button" style={{background: "linear-gradient(to right, rgb(53, 135, 115), rgb(93, 224, 192))"}}>My Projects</a>
@@ -100,7 +102,7 @@ function App() {
                         <a href="mailto:dominicseduraja3@gmail.com" target="_blank" className="home_social-icon" data-aos="fade-down" data-aos-delay="300"><i className="bx bx-mail-send" style={{fontSize: "50px"}}></i></a>
                       </div>
                      <div className="home_img"><img src={HomeImage} /></div>
-                  </section>
+                  </div>
                </div>
                <div>
                   <section className="about section" id="about">
@@ -150,12 +152,12 @@ function App() {
                      </div>
                   </section>
                </div>
-               <section className="projects section" id="projects">
+               <div className="projects section" id="projects">
                   <h2 className="section-title" data-aos="fade-down">Projects</h2>
                   <div className="projects_intro bd_grid" data-aos="fade-down" data-aos-delay="150">
                      <p className="projects_text">Selected work with featured details, technologies, and repository links.</p>
                   </div>
-                  <div className="projects_cards bd_grid" data-aos="fade-up" data-aos-delay="250">
+                  {/* <div className="projects_cards bd_grid" data-aos="fade-up" data-aos-delay="250">
                      {projects.map((project, index) => (
                         <article key={index} className="project_card">
                            <div className="project_img">
@@ -169,11 +171,11 @@ function App() {
                            </div>
                         </article>
                      ))}
-                  </div>
+                  </div> */}
                   <div className="project_slider bd_grid" data-aos="fade-up" data-aos-delay="350">
                      <Slider {...sliderSettings}>{renderSlides()}</Slider>
                   </div>
-               </section>
+               </div>
                {/* <div>
                   <section className="work section" id="work">
                      <h2 className="section-title" data-aos="fade-down">Current Tech Stack</h2>

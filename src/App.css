@@ -66,6 +66,7 @@ body {
   font-size: var(--nomral-font-size);
   color: white;
   background: black;
+  overflow-x: hidden;
 }
 
 h1,
@@ -427,15 +428,30 @@ img {
 .project_slider {
   margin-top: 2rem;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .project_slider .slick-list {
-  overflow: visible;
+  overflow: hidden;
+  overflow-y: hidden;
+  max-height: 100%;
+}
+
+.project_slider .slick-track {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .project_slider .slick-slide {
   opacity: 0.65;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.project_slider .slick-slide > div {
+  overflow: hidden;
 }
 
 .project_slider .slick-center {
