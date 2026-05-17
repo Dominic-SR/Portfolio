@@ -14,7 +14,7 @@ function App() {
       title: "E market Sage",
       description: "A modern e-commerce platform with add to cart functionality built with React, responsive UI, and animated interactions.",
       image: "https://raw.githubusercontent.com/Dominic-SR/E-Market/refs/heads/main/src/assets/images/pic-1.png",
-      tech: "React · CSS · ES6 · HOOHS",
+      tech: "React · CSS · ES6 · HOOKS",
       link: "https://e-market-sage.vercel.app/"
     },
     {
